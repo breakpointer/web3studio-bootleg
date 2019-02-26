@@ -1,6 +1,7 @@
 pragma solidity ^0.5.0;
 
 import "./AbstractSharedRoyaltyToken.sol";
+import "./SharedRoyaltyTokenEnumerable.sol";
 import "./ERC721/ERC721Mintable.sol";
 
 /**
@@ -9,7 +10,7 @@ import "./ERC721/ERC721Mintable.sol";
  * @dev You probably don't want to use this in any production form. It's an
  *  example and a basic way to test the Abstract token implementation
  */
-contract TestSharedRoyaltyToken is AbstractSharedRoyaltyToken, ERC721Mintable {
+contract TestSharedRoyaltyToken is AbstractSharedRoyaltyToken, ERC721Mintable, SharedRoyaltyTokenEnumerable {
   /**
    * @notice Gets remaining payment balance accumulated from transfer of a
    *   given token up to a number of provided payments
